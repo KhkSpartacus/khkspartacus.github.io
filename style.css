@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+/* SIIA LÄHEVAD MUUTUJAD */
+:root {
+    --blue: #00AAEF;
+    --red:;
+    --yellow: #fedb00;
+    --margin-top-big:;
+    --margin-small:;
+    --txt-color:;
+}
+
+/* SCROLLBAR */
+
+.inner::-webkit-scrollbar-track
+{
+    border-radius: 30px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+.inner::-webkit-scrollbar
+{
+    width: 30px;
+    border-radius: 30px;
+}
+
+.inner::-webkit-scrollbar-thumb
+{
+    border-radius: 30px;
+    background-color: var(--yellow);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 145%;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* TAUST */
+
+#home {
+    /*clip-path: url(#cache); */
+    position: relative;
+    opacity: 0.8;
+}
+
+#red {
+    fill: none;
+    opacity: 0.8;
+    stroke: #c8102e;
+    stroke-width: 5;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+}
+
+#blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #00AEEF;
+    stroke-width: 5;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+    fill: none;
+    opacity: 1;
+    stroke: #fedb00;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;    
+}
+
+/* TAUSTA KEYFRAME'ID */
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+ }
+        }
+
+@keyframes show {
+    0% {
+        opacity: 1;
+ }
+    50% {
+        opacity: 1;
+ }
+    100% {
+        opacity: 1;
+ }
+        }
+
+
+
+
+
+
+div.main {
+    min-width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'left top top right'
+    'left content content right'
+    'left bottom bottom right';
+    grid-template-columns: 12vw 1fr 1fr 12vw;
+    grid-template-rows: 20vh 60vh 20vh;
+    position: absolute;
+    top: 0;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+/* LAYOUT */
+
+ /*.top,
+.bottom,
+.left,
+.right {
+    height: 8vh;
+    width: 12vw;
+} */
+
+.top {grid-area: top;}
+.left {grid-area: left;}
+.right {grid-area: right;}
+.bottom {grid-area: bottom;}
+
+.content {
+    grid-area: content;
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+
+.inner {
+    margin: 0 auto;
+    max-height: 50vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: black;
+    width: 60vw;
+
+}
