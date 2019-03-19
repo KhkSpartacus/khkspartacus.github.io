@@ -47,7 +47,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.6rem;
-    margin: 0 0 var(--mrgn-big) 0;
+    margin: 0 0 var(--mrgn-sm) 0;
     text-align: center;
 }
 
@@ -142,13 +142,13 @@ p {
 .right {grid-area: right;}
 .bottom {grid-area: bottom;}
 
-/* SISU */
+/* WRITTEN CONTENT */
 
 .content {
     grid-area: content;
     background-color: black;
     color: var(--txt-color);
-    padding: 100px;
+    padding: 30px 60px;
 }
 
 .inner {
@@ -161,25 +161,46 @@ p {
 
 }
 
-.hex-area {
-    position; relative;
-}
-
-.hexagon {
-    margin: 10px;
-    display: inline;
-}
-
-/* GALERII */
+/* GALLERY */
 
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 .showcase {
-    width: 296.7px;
-    height: 420px;
+    width: 459.16px;
+    height: 650px;
+    background-repeat: no-repeat;
     background: url(poster.jpg);
     background-size: contain;
+}
+
+.gallery-list-item {
+    border: 1.5px solid var(--blue);
+    border-radius: 30px;
+    background-color: black;
+    color: var(--blue);
+    padding: calc(15px / 2) var(--mrgn-big);
+    margin-bottom: var(--mrgn-sm);
+}
+
+.gallery-list-item p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* TIMETABLES */
+
+.grid {
+    display: grid;
+    grid-gap: var(--mrgn-sm);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+
+.grid-elem {
+    padding: var(--mrgn-sm);
+    border: 1.5px solid var(--blue);
 }
