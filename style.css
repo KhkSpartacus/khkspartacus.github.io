@@ -121,7 +121,7 @@ p {
 
 /* MAIN GRID AREA */
 
-div.main {
+.main {
     min-width: 100vw;
     height: 100vh;
     display: grid;
@@ -159,4 +159,27 @@ div.main {
     overflow-x: hidden;
     width: 60vw;
 
+}
+
+.hex-area {
+    position; relative;
+}
+
+.hexagon {
+    margin: 10px;
+    display: inline;
+}
+
+/* GALERII */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.showcase {
+    width: 296.7px;
+    height: 420px;
+    background: url(poster.jpg);
+    background-size: contain;
 }
