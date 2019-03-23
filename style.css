@@ -47,7 +47,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.6rem;
-    margin: 0 0 var(--mrgn-sm) 0;
+    margin: 15px 0 var(--mrgn-sm) 0;
     text-align: center;
 }
 
@@ -58,6 +58,24 @@ ul {
 p {
     text-align: justify;
     margin-bottom: calc(var(--mrgn-sm) / 2);
+}
+
+.main {
+    grid-area: main;
+    background-color: black;
+    color: var(--txt-color);
+    padding: 30px 60px;
+}
+
+.inner {
+    max-height: 50vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.two-side-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* BACKGROUND */
@@ -121,13 +139,13 @@ p {
 
 /* MAIN GRID AREA */
 
-.main {
+.container {
     min-width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-areas: 
     'left top top right'
-    'left content content right'
+    'left main main right'
     'left bottom bottom right';
     grid-template-columns: 13vw 1fr 1fr 13vw;
     grid-template-rows: 13vh 74vh 13vh;
@@ -142,39 +160,56 @@ p {
 .right {grid-area: right;}
 .bottom {grid-area: bottom;}
 
-/* WRITTEN CONTENT */
+/* CLOCK AND DATE */
 
-.content {
-    grid-area: content;
-    background-color: black;
-    color: var(--txt-color);
-    padding: 30px 60px;
+.datetime {
+    color: white;
 }
 
-.inner {
+.top p {
+    text-align: center;
+}
+
+.time {
+    margin-top: 15px;
+    font-size: 2.2rem;
+}
+
+.date {
+    font-size: 1.2rem;
+}
+
+/* HOME & BACK BUTTON */
+
+.logos {
+    padding-top: 270px;
+    display: flex;
+    flex-direction: column;
+}
+.logos img {
+    height: calc(3 * var(--mrgn-sm));
+}
+
+.logos img:first-child {
+    margin-bottom: var(--mrgn-big); 
+}
+
+/* WRITTEN CONTENT */
+
+.written {
+    width: 60vw;
     padding: 0 100px 0 0;
     margin: 0 auto;
-    max-height: 45vh;
-    overflow: scroll;
-    overflow-x: hidden;
-    width: 60vw;
-
 }
 
 /* GALLERY */
 
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-}
-
 .showcase {
-    width: 459.16px;
-    height: 650px;
-    background-repeat: no-repeat;
-    background: url(poster.jpg);
-    background-size: contain;
+    justify-self: center;
+}
+.showcase img {
+
+    max-height: 55vh; 
 }
 
 .gallery-list-item {
@@ -196,11 +231,29 @@ p {
 .grid {
     display: grid;
     grid-gap: var(--mrgn-sm);
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat( auto-fit, minmax(170px, 1fr) );
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .grid-elem {
-    padding: var(--mrgn-sm);
+    margin: 0 auto;
+    padding: 10px;
     border: 1.5px solid var(--blue);
+    height: 60px;
+}
+
+/* TEACHERS AND ROOMS */
+
+.map img {
+    height: 55vh;
+}
+
+.teacher-list {
+    display: grid;
+    grid-template-columns: 40% 25% 35%;
+    grid-template-rows: auto;
+}
+
+.teacher-list p {
+    text-align: center;
 }
