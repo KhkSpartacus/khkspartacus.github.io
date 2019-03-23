@@ -60,6 +60,15 @@ p {
     margin-bottom: calc(var(--mrgn-sm) / 2);
 }
 
+.breadcrumbs,
+.breadcrumbs strong {
+    font-size: 0.8rem;
+}
+
+.breadcrumbs {
+    opacity: 0.3;
+}
+
 .main {
     grid-area: main;
     background-color: black;
@@ -207,8 +216,8 @@ p {
 .showcase {
     justify-self: center;
 }
-.showcase img {
 
+.showcase img {
     max-height: 55vh; 
 }
 
@@ -256,4 +265,18 @@ p {
 
 .teacher-list p {
     text-align: center;
+}
+
+
+
+.hexagrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.hexagon {
+    height: 200px;
+    background: url(Hexagon.svg);
+    background-repeat: no-repeat;
+    z-index: 30;
 }
