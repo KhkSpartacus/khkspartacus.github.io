@@ -47,17 +47,22 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.6rem;
-    margin: 15px 0 var(--mrgn-sm) 0;
+    margin: 7.5px 0 30px 0;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 ul {
     list-style-position: inside;
 }
 
-p {
-    text-align: justify;
+.written p {
+    font-size: 1.07rem;
     margin-bottom: calc(var(--mrgn-sm) / 2);
+}
+
+.written li {
+    font-size: 1.07rem;
 }
 
 .breadcrumbs,
@@ -66,18 +71,20 @@ p {
 }
 
 .breadcrumbs {
-    opacity: 0.3;
+    opacity: 0.8;
+    color: var(--yellow);
 }
 
 .main {
     grid-area: main;
-    background-color: black;
+    background-color: #111;
     color: var(--txt-color);
-    padding: 30px 60px;
+    padding: 15px 30px;
+    border-radius: 15px;
 }
 
 .inner {
-    max-height: 50vh;
+    max-height: 51vh;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -173,6 +180,11 @@ p {
 
 .datetime {
     color: white;
+    max-width: 20vw;
+    background-color: #111;
+    opacity: 0.8;
+    padding-top: 15px;
+    margin: 0 auto;
 }
 
 .top p {
@@ -184,7 +196,8 @@ p {
     font-size: 2.2rem;
 }
 
-.date {
+.time span {
+    padding-left: 7.5px;
     font-size: 1.2rem;
 }
 
@@ -211,6 +224,11 @@ p {
     margin: 0 auto;
 }
 
+.inner-text {
+    padding-right: 7.5px;
+    padding-left: 60px;
+}
+
 /* GALLERY */
 
 .showcase {
@@ -218,21 +236,53 @@ p {
 }
 
 .showcase img {
-    max-height: 55vh; 
+    max-height: 46vh;
+    max-width: 40vw;
+    padding-right: 60px; 
 }
 
+.gallery-list {
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
 .gallery-list-item {
+    width: 48%; 
     border: 1.5px solid var(--blue);
     border-radius: 30px;
-    background-color: black;
-    color: var(--blue);
-    padding: calc(15px / 2) var(--mrgn-big);
+    background-color: var(--blue);
+    color: #111;
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 0;
     margin-bottom: var(--mrgn-sm);
 }
 
 .gallery-list-item p {
     margin-bottom: 0;
     text-align: center;
+}
+
+.thumbnail {
+    max-height: 17vh;
+    width: 17vh;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    margin: 15px;
+    object-fit: cover;
+}
+
+.date {
+    font-size: 0.9rem;
+}
+
+.thumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
 /* TIMETABLES */
@@ -270,13 +320,101 @@ p {
 
 
 .hexagrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
 }
 
-.hexagon {
-    height: 200px;
-    background: url(Hexagon.svg);
-    background-repeat: no-repeat;
+.hexagon h3 {
+    color: black;
+    position: absolute;
     z-index: 30;
+    top: 82px;
+    left: 23px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+#praktikale h3 {
+    top: 46px;
+    left: 23px;
+}
+
+#praktikale,
+#syndmused,
+#tugiteenused,
+#toitlustus,
+#tunniplaan,
+#bussiajad,
+#looming {
+    position: absolute;
+}
+
+#praktikale img,
+#syndmused img,
+#tugiteenused img,
+#toitlustus img,
+#tunniplaan img,
+#bussiajad img,
+#looming img {
+    z-index: 1;
+    height: 200px;
+    transform: rotate(90deg);
+}
+
+/* VASAK POOL */
+
+#praktikale {
+top: 400px;
+left: 450px;
+}
+
+#syndmused {
+top: 600px;
+left: 450px;
+}
+
+#tugiteenused {
+top: 700px;
+left: 650px;
+}
+
+/* PAREM POOL */
+
+#toitlustus {
+top: 190px;
+left: 1000px;
+}
+
+#tunniplaan {
+top: 300px;
+left: 1300px;
+}
+
+#bussiajad {
+top: 500px;
+left: 1300px;
+}
+
+#looming {
+top: 650px;
+left: 1300px;
+}
+
+#ikt {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    top: 50%;
+    left: 50%;
+    margin-bottom: 200px;
+}
+
+#ikt img {
+    height: 300px;
+}
+
+#ikt h3 {
+    transform: rotate(-90deg);
+    font-size: 1.8rem;
 }
