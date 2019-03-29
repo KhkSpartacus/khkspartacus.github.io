@@ -11,8 +11,11 @@
     --blue: #00AAEF;
     --red: #c8102e;
     --yellow: #fedb00;
-    --mrgn-sm: 30px;
-    --mrgn-big: calc(var(--mrgn-sm) * 2);
+    --black: #111;
+    --mrgn-xs: 7.5px;
+    --mrgn-sm: calc(var(--mrgn-xs) * 2); /* 15px */
+    --mrgn-md: calc(var(--mrgn-sm) * 2); /* 30px */
+    --mrgn-lg: calc(var(--mrgn-md) * 2); /* 60px */
     --txt-color: white;
 }
 
@@ -47,7 +50,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.6rem;
-    margin: 7.5px 0 30px 0;
+    margin: var(--mrgn-xs) 0 var(--mrgn-md) 0;
     text-align: center;
     letter-spacing: 2px;
 }
@@ -79,8 +82,12 @@ ul {
     grid-area: main;
     background-color: #111;
     color: var(--txt-color);
-    padding: 15px 30px;
-    border-radius: 15px;
+    padding: var(--mrgn-sm) var(--mrgn-md);
+    border-radius: var(--mrgn-sm);
+}
+
+.main-relative {
+    position: relative;
 }
 
 .inner {
@@ -183,7 +190,7 @@ ul {
     max-width: 20vw;
     background-color: #111;
     opacity: 0.8;
-    padding-top: 15px;
+    padding-top: var(--mrgn-sm);
     margin: 0 auto;
 }
 
@@ -192,12 +199,12 @@ ul {
 }
 
 .time {
-    margin-top: 15px;
+    margin-top: var(--mrgn-sm);
     font-size: 2.2rem;
 }
 
 .time span {
-    padding-left: 7.5px;
+    padding-left: var(--mrgn-xs);
     font-size: 1.2rem;
 }
 
@@ -208,12 +215,13 @@ ul {
     display: flex;
     flex-direction: column;
 }
+
 .logos img {
     height: calc(3 * var(--mrgn-sm));
 }
 
 .logos img:first-child {
-    margin-bottom: var(--mrgn-big); 
+    margin-bottom: var(--mrgn-md); 
 }
 
 /* WRITTEN CONTENT */
@@ -225,8 +233,8 @@ ul {
 }
 
 .inner-text {
-    padding-right: 7.5px;
-    padding-left: 60px;
+    padding-right: var(--mrgn-xs);
+    padding-left: var(--mrgn-lg);
 }
 
 /* GALLERY */
@@ -238,20 +246,21 @@ ul {
 .showcase img {
     max-height: 46vh;
     max-width: 40vw;
-    padding-right: 60px; 
+    padding-right: var(--mrgn-lg); 
 }
 
 .gallery-list {
-    padding-right: 30px;
+    padding-right: var(--mrgn-md);
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
     justify-content: space-between;
 }
+
 .gallery-list-item {
     width: 48%; 
     border: 1.5px solid var(--blue);
-    border-radius: 30px;
+    border-radius: var(--mrgn-md);
     background-color: var(--blue);
     color: #111;
     font-weight: 700;
@@ -270,7 +279,7 @@ ul {
     width: 17vh;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
-    margin: 15px;
+    margin: var(--mrgn-sm);
     object-fit: cover;
 }
 
@@ -288,17 +297,23 @@ ul {
 /* TIMETABLES */
 
 .grid {
+    width: 90%;
+    margin: var(--mrgn-sm) auto 0 auto;
     display: grid;
-    grid-gap: var(--mrgn-sm);
-    grid-template-columns: repeat( auto-fit, minmax(170px, 1fr) );
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: var(--mrgn-lg);
+    justify-content: space-around;
 }
 
 .grid-elem {
-    margin: 0 auto;
     padding: 10px;
-    border: 1.5px solid var(--blue);
-    height: 60px;
+    background-color: var(--blue);
+    color: var(--black);
+    border-radius: 5px;
+    height: 120px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 /* TEACHERS AND ROOMS */
@@ -317,14 +332,62 @@ ul {
     text-align: center;
 }
 
+/* MENU */
 
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--mrgn-md);
+}
+
+.menu,
+.shop {
+    border: 1.5px solid var(--blue);
+    border-radius: 5px;
+}
+
+.menu {
+    padding: var(--mrgn-xs) var(--mrgn-md);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.food-item,
+.price {
+    margin-top: var(--mrgn-sm);
+}
+
+.food-item:last-child,
+.price:last-child {
+    margin-bottom: var(--mrgn-sm);
+}
+
+.price {
+    background-color: var(--blue);
+    color: var(--black);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.shop {
+    position: absolute;
+    top: 5vh;
+    left: 54vw;
+    padding: var(--mrgn-xs);
+}
+
+.shop span:first-child {
+    margin-right: var(--mrgn-sm);
+}
+
+/* AVALEHT */
 
 .hexagrid {
     position: relative;
 }
 
 .hexagon h3 {
-    color: black;
+    color: var(--black);
     position: absolute;
     z-index: 30;
     top: 82px;
