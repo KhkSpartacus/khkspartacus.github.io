@@ -217,11 +217,11 @@ ul {
 }
 
 .logos img {
-    height: calc(3 * var(--mrgn-sm));
+    height: 8vh;
 }
 
 .logos img:first-child {
-    margin-bottom: var(--mrgn-md); 
+    margin-bottom: var(--mrgn-lg); 
 }
 
 /* WRITTEN CONTENT */
@@ -315,6 +315,129 @@ ul {
     text-align: center;
     font-size: 1.4rem;
 }
+
+/* TIMETABLE VIEW */
+
+.timetable-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.timetable-grid h6 {
+    line-height: 120%;
+    font-size: 0.9rem;
+}
+
+.timetable-grid p {
+    line-height: 100%;
+    font-size: 0.8rem;
+}
+
+.tt-day {
+    display: flex;
+    flex-direction: column;
+    margin-right: var(--mrgn-sm);
+}
+
+.tt-class {
+    color: var(--blue);
+    border: 1.5px solid var(--blue);
+    border-radius: 5px;
+    padding: var(--mrgn-xs);
+    margin-bottom: var(--mrgn-xs);
+}
+
+
+/* 2nd version */
+
+.timetable-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-gap: var(--mrgn-sm);
+    grid-template-areas: 
+    "E T K N R L"
+    ". t1 k1 n1 . ."
+    "e1 t2 k2 n2 r1 ."
+    "e2 . k3 . . ."
+    "e3 . k4 . . .";
+}
+
+h2.tt {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+h3.tt {
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.timetable-grid-2 h6 {
+    line-height: 120%;
+    font-size: 0.9rem;
+}
+
+.timetable-grid-2 p {
+    line-height: 100%;
+    font-size: 0.8rem;
+}
+
+#E, #T, #K, #N, #R, #L {
+    text-align: center;
+}
+
+#e1, #e2, #e3,
+#t1, #t2,
+#k1, #k2, #k3, #k4,
+#n1, #n2,
+#r1 {
+    border: 1.5px solid var(--blue);
+    border-radius: 5px;
+    color: var(--blue);
+    padding: var(--mrgn-xs);;
+}
+
+#e1 p, #e2 p, #e3 p,
+#t1 p, #t2 p,
+#k1 p, #k2 p, #k3 p, #k4 p,
+#n1 p, #n2 p,
+#r1 p {
+    color: white;
+}
+
+#e1 { grid-area: e1; }
+#e2 { grid-area: e2; }
+#e3 { grid-area: e3; }
+
+#t1 { grid-area: t1; }
+#t2 { grid-area: t2; }
+
+#k1 { grid-area: k1; }
+#k2 { grid-area: k2; }
+#k3 { grid-area: k3; }
+#k4 { grid-area: k4; }
+
+#n1 { grid-area: n1; }
+#n2 { grid-area: n2; }
+
+#r1 { grid-area: r1; }
+
+#E { grid-area: E; }
+#T { grid-area: T; }
+#K { grid-area: K; }
+#N { grid-area: N; }
+#R { grid-area: R; }
+#L { grid-area: L; }
+
+#tund1 { grid-area: tund1; }
+#tund2 { grid-area: tund2; }
+#tund3 { grid-area: tund3; }
+#tund4 { grid-area: tund4; }
+#tund5 { grid-area: tund5; }
 
 /* TEACHERS AND ROOMS */
 
