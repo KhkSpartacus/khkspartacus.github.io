@@ -78,6 +78,13 @@ ul {
     color: var(--yellow);
 }
 
+.breadcrumbs a {
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--yellow);
+}
+
 .main {
     grid-area: main;
     background-color: #111;
@@ -211,9 +218,8 @@ ul {
 /* HOME & BACK BUTTON */
 
 .logos {
-    padding-top: 270px;
-    display: flex;
-    flex-direction: column;
+    padding-top: 30vh;
+    padding-left: 40%;
 }
 
 .logos img {
@@ -237,7 +243,7 @@ ul {
     padding-left: var(--mrgn-lg);
 }
 
-/* GALLERY */
+/* GALLERY AND JOB/INTERNSHIP */
 
 .showcase {
     justify-self: center;
@@ -249,6 +255,10 @@ ul {
     padding-right: var(--mrgn-lg); 
 }
 
+.job-showcase img {
+    max-height: 50vh;
+}
+
 .gallery-list {
     padding-right: var(--mrgn-md);
     display: flex;
@@ -258,7 +268,7 @@ ul {
 }
 
 .gallery-list-item {
-    width: 48%; 
+    width: 48%;
     border: 1.5px solid var(--blue);
     border-radius: var(--mrgn-md);
     background-color: var(--blue);
@@ -267,6 +277,7 @@ ul {
     font-size: 1.6rem;
     padding: 0;
     margin-bottom: var(--mrgn-sm);
+    padding: var(--mrgn-xs);
 }
 
 .gallery-list-item p {
@@ -501,6 +512,22 @@ h3.tt {
 
 .shop span:first-child {
     margin-right: var(--mrgn-sm);
+}
+
+
+/* GUIDANCE INFO */
+
+.guidance-grid {
+    display: grid;
+    grid-gap: var(--mrgn-md);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.guidance-box {
+    border: 1.5px solid var(--blue);
+    border-radius: 5px;
+    padding: var(--mrgn-sm);
 }
 
 /* AVALEHT */
