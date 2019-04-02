@@ -247,6 +247,45 @@ a {
     padding-left: var(--mrgn-lg);
 }
 
+/* BUS */
+
+.bus-showcase img {
+    width: 600px;
+}
+
+.bus-info p {
+    text-align: center;
+    padding-top: 5vh;
+    text-transform: uppercase;
+}
+
+.bus-no-list {
+    padding-top: var(--mrgn-md);
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bus-no {
+    padding: var(--mrgn-sm) var(--mrgn-md);
+    background-color: var(--blue);
+    border-radius: 5px;
+    color: var(--black);
+    display: inline-block;
+    font-size: 1.6rem;
+}
+
+.bus-no a {
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.bus-table img {
+    max-width: 90%;
+}
+
 /* GALLERY AND JOB/INTERNSHIP */
 
 .showcase {
@@ -266,7 +305,9 @@ a {
 .gallery-list {
     padding-right: var(--mrgn-md);
     display: flex;
+    margin: -10px 0 0 0;
     flex-direction: row;
+    align-content: flex-start;
     flex-flow: wrap;
     justify-content: space-between;
 }
@@ -281,6 +322,7 @@ a {
     font-weight: 700;
     font-size: 1.6rem;
     padding: 0;
+    margin-top: 10px;
     margin-bottom: var(--mrgn-sm);
     padding: var(--mrgn-xs);
 }
