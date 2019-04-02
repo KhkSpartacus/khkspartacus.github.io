@@ -521,11 +521,6 @@ h3.tt {
 
 }
 
-#praktikale h3 {
-    top: 46px;
-    left: 23px;
-}
-
 #praktikale,
 #syndmused,
 #tugiteenused,
@@ -545,52 +540,50 @@ h3.tt {
 #looming img {
     z-index: 1;
     height: 200px;
-    transform: rotate(90deg);
 }
 
 /* VASAK POOL */
 
 #praktikale {
-top: 400px;
-left: 450px;
+top: 34vh;
+left: 22vw;
 }
 
 #syndmused {
-top: 600px;
-left: 450px;
+top: 54vh;
+left: 22vw;
 }
 
 #tugiteenused {
-top: 700px;
-left: 650px;
+top: 64vh;
+left: 32vw;
 }
 
 /* PAREM POOL */
 
 #toitlustus {
-top: 190px;
-left: 1000px;
+top: 15vh;
+left: 62vw;
 }
 
 #tunniplaan {
-top: 300px;
-left: 1300px;
+top: 25vh;
+left: 72vw;
 }
 
 #bussiajad {
-top: 500px;
-left: 1300px;
+top: 45vh;
+left: 72vw;
 }
 
 #looming {
-top: 650px;
-left: 1300px;
+top: 55vh;
+left: 62vw;
 }
 
 #ikt {
     position: absolute;
     transform: translate(-50%, -50%);
-    transform: rotate(90deg);
     top: 50%;
     left: 50%;
     margin-bottom: 200px;
