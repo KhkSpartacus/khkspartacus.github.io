@@ -59,6 +59,10 @@ ul {
     list-style-position: inside;
 }
 
+a {
+    text-decoration: none;
+}
+
 .written p {
     font-size: 1.07rem;
     margin-bottom: calc(var(--mrgn-sm) / 2);
@@ -269,6 +273,7 @@ ul {
 
 .gallery-list-item {
     width: 48%;
+    max-height: 20%;
     border: 1.5px solid var(--blue);
     border-radius: var(--mrgn-md);
     background-color: var(--blue);
@@ -283,6 +288,10 @@ ul {
 .gallery-list-item p {
     margin-bottom: 0;
     text-align: center;
+}
+
+.gallery-list-item a {
+    color: var(--black);
 }
 
 .thumbnail {
@@ -325,6 +334,11 @@ ul {
     line-height: 100px;
     text-align: center;
     font-size: 1.4rem;
+}
+
+.grid-elem a {
+    font-size: 1.4rem;
+    color: var(--black);
 }
 
 /* TIMETABLE VIEW */
