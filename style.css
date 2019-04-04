@@ -610,7 +610,10 @@ h3.tt {
 #toitlustus,
 #tunniplaan,
 #bussiajad,
-#looming {
+#looming,
+#opetajad,
+#ajatelg,
+#erialad {
     position: absolute;
 }
 
@@ -620,7 +623,10 @@ h3.tt {
 #toitlustus img,
 #tunniplaan img,
 #bussiajad img,
-#looming img {
+#looming img,
+#opetajad img,
+#ajatelg img,
+#erialad img {
     z-index: 1;
     height: 200px;
 }
@@ -679,4 +685,21 @@ left: 62vw;
 #ikt h3 {
     transform: rotate(-90deg);
     font-size: 1.8rem;
+}
+
+/* IKT */
+
+#opetajad {
+    top: 45vh;
+    left: 72vw;
+}
+
+#ajatelg {
+    top: 55vh;
+    left: 62vw;
+}
+
+#erialad {
+    top: 25vh;
+    left: 72vw;
 }
