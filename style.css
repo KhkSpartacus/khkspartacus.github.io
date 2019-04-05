@@ -38,21 +38,23 @@
 
 /* MAIN ELEMENTS */
 
+
 body {
     height: 100vh;
     width: 100vw;
     overflow-y: hidden;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open-sans', sans-serif;
     line-height: 200%;
 }
 
 h2 {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin: var(--mrgn-xs) 0 var(--mrgn-md) 0;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
+    font-family: "Open Sans Condensed", sans-serif;
 }
 
 ul {
@@ -200,9 +202,10 @@ a {
     color: white;
     max-width: 20vw;
     background-color: #111;
-    opacity: 0.8;
+    opacity: 0.85;
     padding-top: var(--mrgn-sm);
     margin: 0 auto;
+    font-family: 'Marvel', sans-serif;
 }
 
 .top p {
@@ -211,27 +214,28 @@ a {
 
 .time {
     margin-top: var(--mrgn-sm);
-    font-size: 2.2rem;
+    font-size: 2.4rem;
 }
 
 .time span {
     padding-left: var(--mrgn-xs);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
 }
 
 /* HOME & BACK BUTTON */
 
 .logos {
-    padding-top: 30vh;
+    padding-top: 26vh;
     padding-left: 40%;
 }
 
 .logos img {
-    height: 8vh;
+    height: 7vh;
 }
 
 .logos img:first-child {
-    margin-bottom: var(--mrgn-lg); 
+    margin-bottom: var(--mrgn-md); 
 }
 
 /* WRITTEN CONTENT */
@@ -513,9 +517,20 @@ h3.tt {
 }
 
 .teacher-list {
-    display: grid;
-    grid-template-columns: 40% 25% 35%;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: var(--mrgn-sm);
+    border: 1.5px solid var(--blue);
+    padding: var(--mrgn-xs);
+}
+
+.teacher-info p {
+    padding-right: var(--mrgn-md);
 }
 
 .teacher-list p {
@@ -527,17 +542,29 @@ h3.tt {
 .menu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
     grid-gap: var(--mrgn-md);
+    padding-right: var(--mrgn-lg);
 }
 
-.menu,
+.menu-grid.inner {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.menu-header {
+    margin: var(--mrgn-sm);
+    text-align: center;
+}
+
+.menu-info,
 .shop {
     border: 1.5px solid var(--blue);
     border-radius: 5px;
 }
 
 .menu {
-    padding: var(--mrgn-xs) var(--mrgn-md);
+    padding: var(--mrgn-xs) var(--mrgn-sm);
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
@@ -552,18 +579,39 @@ h3.tt {
     margin-bottom: var(--mrgn-sm);
 }
 
+.food-item {
+    font-weight: 700;
+    line-height: 125%;
+}
+
+.menu span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: var(--mrgn-xs);
+}
+
 .price {
-    background-color: var(--blue);
-    color: var(--black);
     border-radius: 10px;
     text-align: center;
+}
+
+.menu h4 {
+    padding-left: 50%;
+}
+
+.menu .sweet {
+    padding-left: 45%;
+}
+
+.upper-hr:nth-child(n+3) {
+    margin-top: var(--mrgn-sm);
 }
 
 .shop {
     position: absolute;
     top: 5vh;
-    left: 54vw;
-    padding: var(--mrgn-xs);
+    left: 49.5vw;
+    padding: var(--mrgn-xs) var(--mrgn-sm);
 }
 
 .shop span:first-child {
@@ -586,6 +634,9 @@ h3.tt {
     padding: var(--mrgn-sm);
 }
 
+.guidance-box h3 {
+    color: var(--blue);
+}
 /* AVALEHT */
 
 .hexagrid {
@@ -628,7 +679,7 @@ h3.tt {
 #ajatelg img,
 #erialad img {
     z-index: 1;
-    height: 200px;
+    height: 170px;
 }
 
 /* VASAK POOL */
@@ -690,58 +741,155 @@ left: 62vw;
 /* IKT */
 
 #opetajad {
-    top: 45vh;
-    left: 72vw;
+    top: 40vh;
+    left: 40vw;
 }
 
 #ajatelg {
-    top: 55vh;
-    left: 62vw;
+    top: 49vh;
+    left: 49vw;
 }
 
 #erialad {
-    top: 25vh;
-    left: 72vw;
+    top: 31vh;
+    left: 49vw;
 }
 
 /* PROFESSIONS */
+
  .professions {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
     width: 90%;
  }
 
-.prof-elem {
+.prof-elem a {
+    min-height: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: space-between;
     justify-content: center;
     background-color: var(--blue);
     color: var(--black);
-    padding: var(--mrgn-sm);
+    padding: var(--mrgn-xs);
     margin: var(--mrgn-sm);
     border-radius: 10px;
     font-size: 1.4rem;
-    text-align: center;
-    width: 48%;
+    text-align: left;
 }
 
 .prof-elem p {
-    font-size: 1.4rem;
-    margin-top: var(--mrgn-md);
+    font-size: 1.1rem;
+    margin-top: var(--mrgn-xs);
+    line-height: 130%;
+    margin-left: var(--mrgn-sm);
+}
+
+.fknflex {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .prof-elem img {
-    width: 300px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    width: 50px;
+    height: 50px;
 }
 
-.professions .thumbnail {
-    width: auto;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    object-fit: cover;
-    margin: 0;
+.material-icons {
+    font-family: 'Material Icons';
+    font-size: 48px;
+    margin-left: var(--mrgn-sm);
+}
+
+.material-icons.md-36 { font-size: 36px; }
+
+.icon-long {
+    margin-top: 15px;
+}
+
+/* AVALEHT 2 */
+
+#praktikale2,
+#syndmused2,
+#tugiteenused2,
+#toitlustus2,
+#tunniplaan2,
+#bussiajad2,
+#looming2,
+#opetajad2,
+#ajatelg2,
+#erialad2 {
+    position: absolute;
+}
+
+#praktikale2 img,
+#syndmused2 img,
+#tugiteenused2 img,
+#toitlustus2 img,
+#tunniplaan2 img,
+#bussiajad2 img,
+#looming2 img,
+#opetajad2 img,
+#ajatelg2 img,
+#erialad2 img {
+    z-index: 1;
+    height: 180px;
+}
+
+/* VASAK POOL */
+
+#praktikale2 {
+top: 44vh;
+left: 35vw;
+}
+
+#syndmused2 {
+top: 35vh;
+left: 26vw;
+}
+
+#tugiteenused2 {
+top: 35vh;
+left: 64vw;
+}
+
+/* PAREM POOL */
+
+#toitlustus2 {
+top: 26vh;
+left: 55vw;
+}
+
+#tunniplaan2 {
+top: 26vh;
+left: 35vw;
+}
+
+#bussiajad2 {
+top: 44vh;
+left: 55vw;
+}
+
+#looming2 {
+top: 53vh;
+left: 26vw;
+}
+
+#ikt2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 44vh;
+    left: 50.25vw;
+    margin-bottom: 200px;
+}
+
+#ikt2 img {
+    height: 180px;
+}
+
+#ikt2 h3 {
+    transform: rotate(-90deg);
+    font-size: 1.8rem;
 }
