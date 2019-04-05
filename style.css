@@ -254,18 +254,25 @@ a {
 /* BUS */
 
 .bus-showcase img {
-    width: 600px;
+    width: 690px;
 }
 
 .bus-info p {
     text-align: center;
     padding-top: 5vh;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+#or {
+    text-transform: lowercase;
+    font-weight: 400;
 }
 
 .bus-no-list {
     padding-top: var(--mrgn-md);
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -273,7 +280,9 @@ a {
 }
 
 .bus-no {
-    padding: var(--mrgn-sm) var(--mrgn-md);
+    width: 15%;
+    height: 6vh;
+    text-align: center;line-height: 60px;
     background-color: var(--blue);
     border-radius: 10px;
     color: var(--black);
@@ -431,20 +440,33 @@ a {
     ". t1 k1 n1 . ."
     "e1 t2 k2 n2 r1 ."
     "e2 . k3 . . ."
-    "e3 . k4 . . .";
+    "e3 . k4 . . ."
+    ". . k5 . . ."
+    ". . k6 . . ."
+    ". . k7 . . .";
+}
+
+.tt-daterange {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 h2.tt {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin-bottom: var(--mrgn-xs);
 }
 
-h3.tt {
-    font-size: 0.9rem;
+h3.tt-daterange {
+    font-size: 0.8rem;
     margin: 0;
-    font-weight: 400;
     text-align: center;
+}
+
+.tt-daterange .material-icons {
+    margin: 0;
 }
 
 .timetable-grid-2 h6 {
@@ -459,11 +481,12 @@ h3.tt {
 
 #E, #T, #K, #N, #R, #L {
     text-align: center;
+    font-weight: 700;
 }
 
 #e1, #e2, #e3,
 #t1, #t2,
-#k1, #k2, #k3, #k4,
+#k1, #k2, #k3, #k4, #k5, #k6, #k7,
 #n1, #n2,
 #r1 {
     border: 1.5px solid var(--blue);
@@ -474,7 +497,7 @@ h3.tt {
 
 #e1 p, #e2 p, #e3 p,
 #t1 p, #t2 p,
-#k1 p, #k2 p, #k3 p, #k4 p,
+#k1 p, #k2 p, #k3 p, #k4 p, #k5 p, #k6 p, #k7 p,
 #n1 p, #n2 p,
 #r1 p {
     color: white;
@@ -491,6 +514,9 @@ h3.tt {
 #k2 { grid-area: k2; }
 #k3 { grid-area: k3; }
 #k4 { grid-area: k4; }
+#k5 { grid-area: k5; }
+#k6 { grid-area: k6; }
+#k7 { grid-area: k7; }
 
 #n1 { grid-area: n1; }
 #n2 { grid-area: n2; }
@@ -503,12 +529,6 @@ h3.tt {
 #N { grid-area: N; }
 #R { grid-area: R; }
 #L { grid-area: L; }
-
-#tund1 { grid-area: tund1; }
-#tund2 { grid-area: tund2; }
-#tund3 { grid-area: tund3; }
-#tund4 { grid-area: tund4; }
-#tund5 { grid-area: tund5; }
 
 /* TEACHERS AND ROOMS */
 
@@ -804,6 +824,7 @@ left: 62vw;
 }
 
 .material-icons.md-36 { font-size: 36px; }
+.material-icons.md-24 { font-size: 24px; }
 
 .icon-long {
     margin-top: 15px;
