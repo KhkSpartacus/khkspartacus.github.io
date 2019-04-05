@@ -369,26 +369,56 @@ a {
     align-content: flex-start;
 }
 
+/* EVENTS */
+
+.events {
+    display: flex;
+    flex-direction: column;   
+    line-height: 125%;
+    height: 50vh;
+    text-align: center;
+}
+
+.events h4 {
+    text-transform: uppercase;
+    margin-bottom: var(--mrgn-sm);
+    letter-spacing: 1.5px;
+}
+
+.event-heading:not(:first-child) {
+    margin-top: var(--mrgn-sm);
+}
+
+.event-item {
+    background-color: var(--blue);
+    color: var(--black);
+    font-weight: 700;
+    margin-bottom: var(--mrgn-sm);
+    padding: var(--mrgn-xs) 0;
+    text-align: center;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
+}
+
 /* TIMETABLES */
 
 .grid {
     width: 90%;
-    margin: var(--mrgn-sm) auto 0 auto;
+    margin: var(--mrgn-xs) auto 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: var(--mrgn-lg);
-    justify-content: space-around;
+    grid-gap: var(--mrgn-md);
 }
 
 .grid-elem {
-    padding: 10px;
+    padding: var(--mrgn-xs);
     background-color: var(--blue);
     color: var(--black);
     border-radius: 10px;
-    height: 120px;
-    line-height: 100px;
     text-align: center;
     font-size: 1.4rem;
+    padding: var(--mrgn-sm) 0;
 }
 
 .grid-elem a {
@@ -539,24 +569,31 @@ h3.tt-daterange {
 .teacher-list {
     display: flex;
     flex-direction: column;
+    padding-right: var(--mrgn-lg);
 }
 
 .teacher-info {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     margin-bottom: var(--mrgn-sm);
-    border: 1.5px solid var(--blue);
     padding: var(--mrgn-xs);
 }
 
-.teacher-info p {
-    padding-right: var(--mrgn-md);
+.teacher-head {
+    font-weight: 700;
 }
 
 .teacher-list p {
     text-align: center;
 }
 
+.teacher-click {
+    background-color: var(--blue);
+    color: var(--black);
+    border-radius: 20px;
+    min-width: 200px;
+}
 /* MENU */
 
 .menu-grid {
