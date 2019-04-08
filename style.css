@@ -843,7 +843,7 @@ left: 62vw;
     margin-left: var(--mrgn-sm);
 }
 
-.fknflex {
+.flexter {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
