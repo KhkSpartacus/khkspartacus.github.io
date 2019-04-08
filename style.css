@@ -408,7 +408,7 @@ a {
     margin: var(--mrgn-xs) auto 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: var(--mrgn-md);
+    grid-gap: var(--mrgn-md) var(--mrgn-sm);
 }
 
 .grid-elem {
