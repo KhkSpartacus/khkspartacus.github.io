@@ -976,3 +976,20 @@ left: 26vw;
     transform: rotate(-90deg);
     font-size: 1.8rem;
 }
+
+@keyframes fade-in-out {
+  0%    { opacity: 0; }
+  50%   { opacity: 0; }
+  75%   { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+#touch {
+    height: 6.5vh;
+    position: absolute;
+    top: 65vh;
+    left: 48.5vw;
+    animation-name: fade-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
