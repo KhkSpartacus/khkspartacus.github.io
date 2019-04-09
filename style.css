@@ -267,8 +267,9 @@ a {
 
 /* BUS */
 
-.bus-showcase img {
+#bus-map {
     width: 690px;
+    margin-top: 0;
 }
 
 .bus-info p {
@@ -310,7 +311,7 @@ a {
 }
 
 .bus-table img {
-    max-width: 90%;
+    max-width: 95%;
 }
 
 /* GALLERY AND JOB/INTERNSHIP */
@@ -637,6 +638,7 @@ h3.tt-daterange {
 .menu-header {
     margin: var(--mrgn-sm);
     text-align: center;
+    font-size: 0.9rem;
 }
 
 .menu-info,
@@ -737,88 +739,6 @@ h3.tt-daterange {
 
 }
 
-#praktikale,
-#syndmused,
-#tugiteenused,
-#toitlustus,
-#tunniplaan,
-#bussiajad,
-#looming,
-#opetajad,
-#ajatelg,
-#erialad {
-    position: absolute;
-}
-
-#praktikale img,
-#syndmused img,
-#tugiteenused img,
-#toitlustus img,
-#tunniplaan img,
-#bussiajad img,
-#looming img,
-#opetajad img,
-#ajatelg img,
-#erialad img {
-    z-index: 1;
-    height: 170px;
-}
-
-/* VASAK POOL */
-
-#praktikale {
-top: 34vh;
-left: 18vw;
-}
-
-#syndmused {
-top: 54vh;
-left: 18vw;
-}
-
-#tugiteenused {
-top: 64vh;
-left: 28vw;
-}
-
-/* PAREM POOL */
-
-#toitlustus {
-top: 15vh;
-left: 62vw;
-}
-
-#tunniplaan {
-top: 25vh;
-left: 72vw;
-}
-
-#bussiajad {
-top: 45vh;
-left: 72vw;
-}
-
-#looming {
-top: 55vh;
-left: 62vw;
-}
-
-#ikt {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    margin-bottom: 200px;
-}
-
-#ikt img {
-    height: 300px;
-}
-
-#ikt h3 {
-    transform: rotate(-90deg);
-    font-size: 1.8rem;
-}
 
 /* IKT */
 
@@ -903,7 +823,10 @@ left: 62vw;
 #looming2,
 #opetajad2,
 #ajatelg2,
-#erialad2 {
+#erialad2,
+#opetajad,
+#ajatelg,
+#erialad {
     position: absolute;
 }
 
@@ -916,7 +839,10 @@ left: 62vw;
 #looming2 img,
 #opetajad2 img,
 #ajatelg2 img,
-#erialad2 img {
+#erialad2 img,
+#opetajad img,
+#ajatelg img,
+#erialad img {
     z-index: 1;
     height: 180px;
 }
