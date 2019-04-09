@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;subset=latin-ext" rel="stylesheet">
 
 </head>
-<body>
+<body onload="updateClock(); setInterval('updateClock()', 1000 )">
 
 <div class="container">
     <div class="main">
@@ -21,35 +21,57 @@
         <div class="inner teacher-list">
             <div class="teacher-info">
                 <p class="teacher-head">Nimi</p>
-                <p class="teacher-head">Ruumid</p>
-                <p class="teacher-head">Kontakt</p>
-            </div>
-            <div class="teacher-info">
-                <p class="teacher-click">Eve Mäeorg</p>
-                <p>407</p>
-                <p>eve.maeorg@khk.ee</p>
-            </div>
-            <div class="teacher-info">
-                <p class="teacher-click">Anne Mootse</p>
-                <p>409</p>
-                <p>anne.mootse@khk.ee</p>
+                <p class="teacher-head">Ruum</p>
+                <div class="email"><p class="teacher-head">E-mail @khk.ee</p></div>
             </div>
             <div class="teacher-info">
                 <p class="teacher-click">Anna Karutina</p>
-                <p>411</p>
-                <p>anna.karutina@khk.ee</p>
+                <p>A408</p>
+                <div class="email"><p>anna.karutina</p></div>
+            </div>
+            <div class="teacher-info">
+                <p class="teacher-click">Annagreta Raudseping</p>
+                <p></p>
+                <div class="email"><p>annagreta.raudseping</p></div>
+            </div>
+            <div class="teacher-info">
+                <p class="teacher-click">Anne Mootse</p>
+                <p>A409</p>
+                <div class="email"><p>anne.mootse</p></div>
+            </div>
+            <div class="teacher-info">
+                <p class="teacher-click">Anne Uibo</p>
+                <p>B210</p>
+                <div class="email"><p>anne.uibo</p></div>
+            </div>
+            <div class="teacher-info">
+                <p class="teacher-click">Eve Mäeorg</p>
+                <p>A407</p>
+                <div class="email"><p>eve.maeorg</p></div>
             </div>
             <div class="teacher-info">
                 <p class="teacher-click">Ly Otsa</p>
-                <p>418</p>
-                <p>ly.otsa@khk.ee</p>
+                <p>A418</p>
+                <div class="email"><p>ly.otsa</p></div>
+            </div>
+            <div class="teacher-info">
+                <p class="teacher-click">Mirjam-Merike Sõmer</p>
+                <p>A137</p>
+                <div class="email"><p>mirjam.somer</p></div>
             </div>
         </div>
         </div>
     </div>
     <div class="top">
         <div class="datetime">
-        <p class="time">14:00 <br><span>K, 10. aprill 2019</span></p>
+            <div class="clock">
+                <p id="hour">&nbsp;</p>
+                <p class="colon">&#58;</p>
+                <p id="minute">&nbsp;</p>
+                <p class="colon">&#58;</p>
+                <p id="second">&nbsp;</p>
+            </div>
+            <p id="date">K, 10. aprill 2019</p>
         </div>
     </div>
     <div class="left"></div>
@@ -170,5 +192,6 @@
 </g>
 </svg>
 
+<script src="script.js"></script> 
 </body>
 </html>

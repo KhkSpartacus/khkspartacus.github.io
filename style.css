@@ -201,26 +201,40 @@ a {
 .datetime {
     color: white;
     max-width: 20vw;
-    background-color: #111;
     opacity: 0.85;
     padding-top: var(--mrgn-sm);
     margin: 0 auto;
     font-family: 'Marvel', sans-serif;
+    position: relative;
 }
 
 .top p {
     text-align: center;
 }
 
-.time {
-    margin-top: var(--mrgn-sm);
-    font-size: 2.4rem;
+#date {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 6.7vh;
+    left: 25%;
+    background-color: #111;
 }
 
-.time span {
-    padding-left: var(--mrgn-xs);
-    font-size: 1.3rem;
-    letter-spacing: 1px;
+#hour, #minute, #second, .colon {
+    font-size: 2.6rem;
+    color: white;
+}
+
+.clock {
+    position: absolute;
+    left: 30%;
+    top: 2vh;
+    background-color: #111;
+}
+
+.clock p {
+ display: inline-block;
 }
 
 /* HOME & BACK BUTTON */
@@ -408,7 +422,7 @@ a {
     margin: var(--mrgn-xs) auto 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: var(--mrgn-md) var(--mrgn-sm);
+    grid-gap: 42px var(--mrgn-md);
 }
 
 .grid-elem {
@@ -563,25 +577,28 @@ h3.tt-daterange {
 /* TEACHERS AND ROOMS */
 
 .map img {
-    height: 55vh;
+    margin-top: 5vh;
+    margin-left: 3vw;
+    height: 45vh;
 }
 
 .teacher-list {
     display: flex;
     flex-direction: column;
-    padding-right: var(--mrgn-lg);
+    padding-right: var(--mrgn-md);
 }
 
 .teacher-info {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 3.5fr 1fr 3fr;
+    grid-gap: var(--mrgn-sm);
     margin-bottom: var(--mrgn-sm);
     padding: var(--mrgn-xs);
 }
 
 .teacher-head {
     font-weight: 700;
+    text-align: center;
 }
 
 .teacher-list p {
@@ -593,7 +610,15 @@ h3.tt-daterange {
     color: var(--black);
     border-radius: 20px;
     min-width: 200px;
+    margin-right: var(--mrgn-sm);
 }
+
+.teacher-list .email p {
+    text-align: left;
+    margin-left: var(--mrgn-sm);
+    font-size: 0.9rem;
+}
+
 /* MENU */
 
 .menu-grid {

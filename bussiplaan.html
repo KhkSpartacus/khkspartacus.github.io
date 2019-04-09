@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;subset=latin-ext" rel="stylesheet">
 
 </head>
-<body>
+<body onload="updateClock(); setInterval('updateClock()', 1000 )">
 
 <div class="container">
     <div class="main">
@@ -36,7 +36,14 @@
     </div>
     <div class="top">
         <div class="datetime">
-        <p class="time">14:00 <br><span>K, 10. aprill 2019</span></p>
+            <div class="clock">
+                <p id="hour">&nbsp;</p>
+                <p class="colon">&#58;</p>
+                <p id="minute">&nbsp;</p>
+                <p class="colon">&#58;</p>
+                <p id="second">&nbsp;</p>
+            </div>
+            <p id="date">K, 10. aprill 2019</p>
         </div>
     </div>
     <div class="left"></div>
@@ -157,5 +164,6 @@
 </g>
 </svg>
 
+<script src="script.js"></script> 
 </body>
 </html>
