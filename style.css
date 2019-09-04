@@ -529,10 +529,10 @@ h3.tt-daterange {
     font-weight: 700;
 }
 
-#t1, #t2, #t3, #t4
-#k1, #k2, #k3, #k4,
-#n1, #n2, #n3, #n4
-#r1, #r2, #r3, #r4 {
+#t1, #t2, #t3, #t4, #t5,
+#k1, #k2, #k3, #k4, #k5,
+#n1, #n2, #n3, #n4, #n5,
+#r1, #r2, #r3, #r4, #r5 {
     border: 1.5px solid var(--blue);
     border-radius: 10px;
     color: var(--blue);
@@ -540,10 +540,10 @@ h3.tt-daterange {
 }
 
 #e1 p, #e2 p, #e3 p,
-#t1 p, #t2 p, #t3 p, #t4 p,
-#k1 p, #k2 p, #k3 p, #k4 p, #k5 p, #k6 p, #k7 p,
-#n1 p, #n2 p, #n3 p, #n4 p,
-#r1 p, #r2 p, #r3 p, #r4 p  {
+#t1 p, #t2 p, #t3 p, #t4 p, #t5 p,
+#k1 p, #k2 p, #k3 p, #k4 p, #k5 p,
+#n1 p, #n2 p, #n3 p, #n4 p, #n5 p,
+#r1 p, #r2 p, #r3 p, #r4 p, #r5 p  {
     color: white;
 }
 
@@ -551,21 +551,25 @@ h3.tt-daterange {
 #t2 { grid-area: t2; }
 #t3 { grid-area: t3; }
 #t4 { grid-area: t4; }
+#t5 { grid-area: t5; }
 
 #k1 { grid-area: k1; }
 #k2 { grid-area: k2; }
 #k3 { grid-area: k3; }
 #k4 { grid-area: k4; }
+#k5 { grid-area: k5; }
 
 #n1 { grid-area: n1; }
 #n2 { grid-area: n2; }
 #n3 { grid-area: n3; }
 #n4 { grid-area: n4; }
+#n5 { grid-area: n5; }
 
 #r1 { grid-area: r1; }
 #r2 { grid-area: r2; }
 #r3 { grid-area: r3; }
 #r4 { grid-area: r4; }
+#r5 { grid-area: r5; }
 
 #E { grid-area: E; }
 #T { grid-area: T; }
