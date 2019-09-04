@@ -529,7 +529,6 @@ h3.tt-daterange {
     font-weight: 700;
 }
 
-#e1, #e2, #e3, 
 #t1, #t2, #t3, #t4
 #k1, #k2, #k3, #k4,
 #n1, #n2, #n3, #n4
@@ -548,10 +547,6 @@ h3.tt-daterange {
     color: white;
 }
 
-#e1 { grid-area: e1; }
-#e2 { grid-area: e2; }
-#e3 { grid-area: e3; }
-
 #t1 { grid-area: t1; }
 #t2 { grid-area: t2; }
 #t3 { grid-area: t3; }
@@ -561,9 +556,6 @@ h3.tt-daterange {
 #k2 { grid-area: k2; }
 #k3 { grid-area: k3; }
 #k4 { grid-area: k4; }
-#k5 { grid-area: k5; }
-#k6 { grid-area: k6; }
-#k7 { grid-area: k7; }
 
 #n1 { grid-area: n1; }
 #n2 { grid-area: n2; }
