@@ -482,13 +482,13 @@ a {
     grid-gap: var(--mrgn-sm);
     grid-template-areas: 
     "E T K N R L"
-    ". t1 k1 n1 . ."
-    "e1 t2 k2 n2 r1 ."
-    "e2 . k3 . . ."
-    "e3 . k4 . . ."
-    ". . k5 . . ."
-    ". . k6 . . ."
-    ". . k7 . . .";
+    ". t1 k1 n1 r1 ."
+    ". t2 k2 n2 r2 ."
+    ". t3 k3 n3 r3 ."
+    ". t4 k4 n4 r4 ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . .";
 }
 
 .tt-daterange {
@@ -529,11 +529,11 @@ h3.tt-daterange {
     font-weight: 700;
 }
 
-#e1, #e2, #e3,
-#t1, #t2,
-#k1, #k2, #k3, #k4, #k5, #k6, #k7,
-#n1, #n2,
-#r1 {
+#e1, #e2, #e3, 
+#t1, #t2, #t3, #t4
+#k1, #k2, #k3, #k4,
+#n1, #n2, #n3, #n4
+#r1, #r2, #r3, #r4 {
     border: 1.5px solid var(--blue);
     border-radius: 10px;
     color: var(--blue);
@@ -541,10 +541,10 @@ h3.tt-daterange {
 }
 
 #e1 p, #e2 p, #e3 p,
-#t1 p, #t2 p,
+#t1 p, #t2 p, #t3 p, #t4 p,
 #k1 p, #k2 p, #k3 p, #k4 p, #k5 p, #k6 p, #k7 p,
-#n1 p, #n2 p,
-#r1 p {
+#n1 p, #n2 p, #n3 p, #n4 p,
+#r1 p, #r2 p, #r3 p, #r4 p  {
     color: white;
 }
 
@@ -554,6 +554,8 @@ h3.tt-daterange {
 
 #t1 { grid-area: t1; }
 #t2 { grid-area: t2; }
+#t3 { grid-area: t3; }
+#t4 { grid-area: t24 }
 
 #k1 { grid-area: k1; }
 #k2 { grid-area: k2; }
@@ -565,8 +567,13 @@ h3.tt-daterange {
 
 #n1 { grid-area: n1; }
 #n2 { grid-area: n2; }
+#n3 { grid-area: n3; }
+#n4 { grid-area: n4; }
 
 #r1 { grid-area: r1; }
+#r2 { grid-area: r2; }
+#r3 { grid-area: r3; }
+#r4 { grid-area: r4; }
 
 #E { grid-area: E; }
 #T { grid-area: T; }
